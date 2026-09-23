@@ -22,6 +22,12 @@
             box-shadow: rgba(149,157,165,0.2) 0px 8px 20px;       /* 阴影：颜色 + 水平偏移0 + 垂直偏移8px + 模糊范围20px */
             text-align: center;                                     /* 文字水平居中（影响里面的文字类内容） */
             box-sizing: border-box;                                 /* 让padding和border都算在width和height之内，不会把盒子撑大 */
+            transition: all 0.3s ease;                              /* 让变化“过渡”得很平滑，而不是瞬间跳变 */
+        }
+
+        .resume-card:hover {                                        /* （：hover是伪类），当鼠标悬停在这个元素上时触发 */
+            transform: translateY(-5px);                            /* 往上移动5px，制造“浮起来”的感觉 */
+            box-shadow: rgba(149,157,165,0.4) 0px 12px 28px;      /* 阴影变深，变大 */
         }
 
         .avatar {
@@ -56,8 +62,15 @@
             padding: 5px 15px;                                      /* 内边距：上下5px 左右15px，让标签有“胖胖”的感觉 */
             border-radius: 20px;                                    /* 圆角很大，接近胶囊/药丸形状 */
             font-size: 13px;                                        /* 字体较小 */
+            cursor: pointer;                                        /* 鼠标移上去变成小手指，暗示“可交互” */
+            transition: all 0.2s;                                   /* 变化过渡 */
         }
         
+        .skill-tag:hover {
+            background-color: #1a73e8;                            /* 标签背景颜色：深蓝 */
+            color: #fff;                                          /* 文字颜色：白色 */
+        }
+
         .contact {
             border-top: 1px solid #eee;                           /* 只给顶部加一条1px的浅灰色边框线，当分割线 */
             padding-top: 15px;                                      /* 分割线和上面内容之间留15px空隙 */
