@@ -22,8 +22,16 @@
             flex-start          顶部对齐
             flex-end            底部对齐
             center              垂直居中
-            stretch             默认值，拉伸填满整个高度
+            stretch             默认值：拉伸填满整个高度
         
+            对于flex-wrap：
+            nowrap              默认值：不换行，硬挤在一行
+            wrap                装不下就自动换到下一行
+            
+            对于flex-grow：
+            0                   默认值：不主动抢空间，有多少空间就摆多少
+            1                   主动抢空间，把剩余空间占满
+
         */
         body {
             margin: 0;                                              /* 清除浏览器默认给body加的外边距 */
