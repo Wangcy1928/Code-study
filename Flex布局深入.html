@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人简历</title>
     <style>
+        /*以简历页为例
+
+            justify-content     主轴    内容在水平方向怎么分布
+            align-items        交叉轴   内容在垂直方向怎么分布
+
+            对于justify-content：
+            flex-start          都挤在左边（默认值）
+            flex-end            都挤在右边
+            center              居中
+            space-between       两端贴边，中间平均分配空隙
+            space-around        两端留白，但两端空隙=中间空隙的一半
+            space-evenly        所有空隙（包括两端）完全相等
+        
+            对于align-items：
+            flex-start          顶部对齐
+            flex-end            底部对齐
+            center              垂直居中
+            stretch             默认值，拉伸填满整个高度
+        
+        */
         body {
             margin: 0;                                              /* 清除浏览器默认给body加的外边距 */
             height: 100vh;                                          /* 高度=整个屏幕可视区域高度，vh是“视口高度单位”，100vh=100%屏幕高 */
@@ -51,7 +71,7 @@
 
         .skills {
             display: flex;                                          /* 弹性布局，让里面的标签横向排列（不然span是行内元素，但配合gap更方便控制间距） */
-            justify-content: center;                                /* 标签整体水平居中 */
+            justify-content: space-evenly;                          /* 标签整体水平居中 */
             gap: 10px;                                              /* 每个标签之间的间距10px（比手动加margin更简洁） */
             margin-bottom: 20px;                                    /* 和下面联系方式区域留出20px区域 */
         }
