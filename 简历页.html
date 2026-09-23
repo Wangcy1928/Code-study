@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            margin: 0;                                              /* 清除浏览器默认给body加的外边距 */
+            height: 100vh;                                          /* 高度=整个屏幕可视区域高度，vh是“视口高度单位”，100vh=100%屏幕高 */
+            background-color: #f0f2f5;                            /* 背景色：淡灰色 */
+            display: flex;                                          /* 把body变成弹性布局容器，内部元素可以灵活排列/居中 */
+            justify-content: center;                                /* 主轴（默认水平方向）上居中 */
+            align-items: center;                                    /* 交叉轴（默认垂直方向）上居中，配合justify-content实现“完全居中” */
+        }
+
+        .resume-card {
+            width: 320px;                                           /* 卡片宽度320像素 */
+            padding: 30px;                                          /* 内边距：卡片边框到里面内容之间留30px空隙 */
+            background-color: #fff;                               /* 背景色：白色 */
+            border-radius: 12px;                                    /* 圆角：四个角都磨圆，12px */
+            box-shadow: rgba(149,157,165,0.2) 0px 8px 20px;       /* 阴影：颜色 + 水平偏移0 + 垂直偏移8px + 模糊范围20px */
+            text-align: center;                                     /* 文字水平居中（影响里面的文字类内容） */
+            box-sizing: border-box;                                 /* 让padding和border都算在width和height之内，不会把盒子撑大 */
+        }
+
+        .avatar {
+            width: 80px;                                            /* 头像宽度 */
+            height: 80px;                                           /* 头像高度，和width相等才能变成正圆 */
+            border-radius: 50%;                                     /* 圆角设为50%，正方形 + 50%圆角 = 圆形 */
+            background-color: #ddd;                               /* 没头像时的占位背景色：浅灰 */
+            object-fit: cover;                                      /* 图片如何填充这个框：cover=等比缩放并裁剪，填满整个框不变形 */
+        }
+
+        .name {
+            margin: 15px 0 5px;                                     /* 外边距：上15px 左右0 下5px（简写顺序是上右下左，这里省略了左） */
+            font-size: 22px;                                        /* 字体大小 */
+        }
+
+        .intro {
+            color: #888;                                          /* 文字颜色：灰色 */
+            font-size: 14px;                                        /* 文字大小：比标题小 */
+            margin: 0 0 20px;                                       /* 外边距：只保留下方20px,上左右都是0 */
+        }
+
+        .skills {
+            display: flex;                                          /* 弹性布局，让里面的标签横向排列（不然span是行内元素，但配合gap更方便控制间距） */
+            justify-content: center;                                /* 标签整体水平居中 */
+            gap: 10px;                                              /* 每个标签之间的间距10px（比手动加margin更简洁） */
+            margin-bottom: 20px;                                    /* 和下面联系方式区域留出20px区域 */
+        }
+
+        .skill-tag {
+            background-color: #e8f0fe;                            /* 标签背景色：淡蓝色 */
+            color: #1a73e8;                                       /* 文字颜色：深蓝色 */
+            padding: 5px 15px;                                      /* 内边距：上下5px 左右15px，让标签有“胖胖”的感觉 */
+            border-radius: 20px;                                    /* 圆角很大，接近胶囊/药丸形状 */
+            font-size: 13px;                                        /* 字体较小 */
+        }
+        
+        .contact {
+            border-top: 1px solid #eee;                           /* 只给顶部加一条1px的浅灰色边框线，当分割线 */
+            padding-top: 15px;                                      /* 分割线和上面内容之间留15px空隙 */
+        }
+        
+        .contact p {
+            margin: 8px 0;                                          /* 每行文字上下各留8px间距，左右不留 */
+            font-size: 14px;                                        /* 字体大小 */
+            color: #555;                                          /* 文字颜色：深灰色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-card">
+        <img src="" alt="头像" class="avatar">
+        <h1 class="name">Wcy</h1>
+        <p class="intro">一名正在学习全栈的计科大学生</p>
+
+        <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+        </div>
+
+        <div class="contact">
+            <p>邮箱</p>
+            <p>电话</p>
+        </div>
+    </div>
+
+</body>
+</html>
